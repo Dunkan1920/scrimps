@@ -1,0 +1,264 @@
+:root{
+	--clr-blueishWhite: #CEF1EC;
+	--clr-blueishGray: #C8E5E1;
+	--clr-darkPurple: #18094B;
+	--clr-brightPurple: #5100E8;
+	--clr-aquamarine: #75D2A9;
+}
+
+body{
+	background-color: var(--clr-darkPurple);
+	background-image: linear-gradient(black, var(--clr-darkPurple), var(--clr-darkPurple));
+	color: var(--clr-darkPurple);
+	font-family: bahnschrift, Tahoma, Verdana, sans-serif;
+	
+	overflow-x: hidden;
+}
+
+h2{
+	font-weight: bold;
+	padding: 20px 0px;
+}
+
+h3{
+	padding: 10px 0px;
+}
+
+#navbar{
+	background-color: var(--clr-blueishWhite);
+	
+	height: 80px;
+	padding: 10px 20px;
+	
+	display: flex;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#navbar-logo-div{
+	width: 50px;
+	height: 50px;
+	border: 1px solid var(--clr-darkPurple);
+	border-radius: 25px;
+}
+
+#navbar-logo-div img{
+	border-radius: 25px;
+}
+
+#navtabs-div{
+	display: flex;
+}
+
+#navtabs-div a{
+	font-size: 1.25rem;
+	font-weight: bold;
+	
+	display: block;
+	
+	padding: 18px 10px;
+}
+
+#navtabs-div a:hover{
+	color: var(--clr-brightPurple);
+}
+
+article a:hover{
+	color: var(--clr-brightPurple);
+}
+/* Background and Main */
+main{
+	background-color: green;
+	background-image: radial-gradient(ellipse at top, #b0fbff, #09bbef, #081d75, black, black);
+	
+	height: 50vh;
+}
+
+main img{
+	position: absolute;
+	z-index: 0;
+	top: 0;
+}
+
+#bgImg4{
+	top: 100px;
+	left: 1000px;
+	
+	transform: scaleX(-1);
+}
+
+main h1{
+	position: relative;
+	z-index: 1;
+}
+/* End of Background and main */
+article{
+	background-color: var(--clr-blueishWhite);
+	
+	width: 90%;
+	margin: 20px 5%;
+	padding: 100px 50px;
+	position: relative;
+	z-index: 10;
+}
+
+/* .contentSection{ */
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* justify-content: center; */
+	/* align-items: space-around; */
+/* } */
+
+table{
+	background-color: var(--clr-aquamarine);
+	width: 100%;
+	border: 3px solid var(--clr-darkPurple);
+}
+
+th{
+	border-left: 2px solid var(--clr-darkPurple);
+	border-right: 1px solid var(--clr-darkPurple);
+	border-bottom: 1px solid var(--clr-darkPurple);
+	vertical-align: middle;
+	padding: 5px 10px;
+}
+
+td{
+	border-bottom: 1px solid var(--clr-darkPurple);
+	vertical-align: middle;
+	padding: 2px 5px;
+}
+
+ul{
+	margin: 10px 40px 20px;
+}
+
+#harlequinTitleDiv{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#bigHarlequinDiv{
+	background-color: var(--clr-darkPurple);
+	color: var(--clr-blueishWhite);
+	width: 50%;
+	
+	display: flex;
+	
+	border: 5px inset;
+	
+	margin: 10px;
+}
+
+.mainContentContainer{
+	padding: 25px 0px;
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.textContainer{
+	background-color: var(--clr-blueishGray);
+	width: 50%;
+	height: 100%;
+	padding: 25px;
+}
+
+.tableImgContainer{
+	width: 45%;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#finalSectionDiv{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#finalSectionDiv a{
+	text-decoration: underline;
+}
+
+/* Start of carrousel */
+.carrouselTrackSection{
+	background-color: var(--clr-aquamarine);
+	box-shadow: inset 0 0 10px black;
+	width: 95%;
+	height: 225px;
+	margin: 20px 0px;
+	padding-top: 20px;
+	position: relative;
+	
+	overflow-x: auto;
+}
+.carrouselItemContainerDiv{
+	background-color: var(--clr-darkPurple);
+	width: 1570px;
+	height: 100%;
+	padding: 0px 10px;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(6, 250px);
+	grid-template-rows: repeat(8, 100%);
+	gap: 10px;
+	user-select: none;
+}
+.carrouselItemImg{
+	width: 250px;
+	height: 100%;
+	position: relative;
+	
+	object-fit: scale-down;
+	user-select: none;
+}
+.carrouselItemImg:hover{
+	padding: 5px;
+}
+.carrouselItemImg:focus{
+	width: fit-content;
+	padding: 0px;
+}
+.carrouselTrackSection::-webkit-scrollbar{
+	height: 20px;
+}
+.carrouselTrackSection::-webkit-scrollbar-track{
+	background-color: var(--clr-aquamarine);
+	box-shadow: inset 0 0 3px black;
+}
+.carrouselTrackSection::-webkit-scrollbar-track-piece{
+	background-color: black;
+	border: 8px solid transparent;
+	background-clip: content-box;
+}
+.carrouselTrackSection::-webkit-scrollbar-button{
+	background-color: var(--clr-aquamarine);
+	box-shadow: inset 0 0 6px black;
+	width: 20px;
+}
+.carrouselTrackSection::-webkit-scrollbar-button:horizontal:increment{
+	background-image: url("./images/scrollBtnR.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 60% 60%;
+}
+.carrouselTrackSection::-webkit-scrollbar-button:horizontal:decrement{
+	background-image: url("./images/scrollBtnL.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 60% 60%;
+}
+.carrouselTrackSection::-webkit-scrollbar-thumb{
+	background-color: gold;
+	box-shadow: inset 0 0 3px blue;
+	border: 6px solid transparent;
+	background-clip: content-box;
+}
+/* End of carrousel */
